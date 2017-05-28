@@ -1,0 +1,1 @@
+Este webservice faz uso do framework Slim para gerenciamento das rotas. O mesmo não está incluído no repositório.
