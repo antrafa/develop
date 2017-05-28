@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppPreferences</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="gravar">Gravar</string>
+    <string name="ler">Ler</string>
+    <string name="title_activity_segunda">Lendo Preferences</string>
+    <string name="segunda_tela">Segunda Tela</string>
+</resources>

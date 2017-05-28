@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lista de tarefas</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_cadastrar_tarefa">Cadastrar Tarefa</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="titulo_tarefa">Título da tarefa</string>
+    <string name="descricao_tarefa">Descrição da tarefa</string>
+    <string name="data">Data</string>
+    <string name="horario">Horário</string>
+    <string name="title_activity_notificar_usuario">NotificarUsuario</string>
+</resources>

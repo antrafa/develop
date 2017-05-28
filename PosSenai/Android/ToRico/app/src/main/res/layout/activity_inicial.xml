@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".InicialActivity"
+    android:background="#efefef">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:background="#69D2E7"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:text="@string/to_rico"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:text="@string/valor_hora"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:textColor="#FA6900"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/valor_hora"
+        android:text="0,00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textColor="#666666"
+        android:padding="10dp" />
+
+    <TextView
+        android:text="@string/tempo_trabalhado"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:textColor="#FA6900"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tempo_trabalhado"
+        android:text="0,00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textColor="#666666"
+        android:padding="10dp" />
+
+    <TextView
+        android:text="@string/to_rico"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:textColor="#FA6900"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/to_rico"
+        android:text="0,00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textColor="#666666"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnparar"
+        android:text="@string/parar"
+        android:layout_width="match_parent"
+        android:enabled="false"
+        android:onClick="parar"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnpausar"
+        android:text="@string/pausar"
+        android:layout_width="match_parent"
+        android:enabled="false"
+        android:onClick="pausar"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btniniciar"
+        android:text="@string/iniciar"
+        android:onClick="iniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tô Rico</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configurações</string>
+    <string name="salario_bruto">Salário Bruto</string>
+    <string name="informe_salario_bruto">Informe o salário bruto</string>
+    <string name="horas_normais">Horas normais</string>
+    <string name="informe_horas_normais">Informe as horas normais</string>
+    <string name="informe_porcentagem_adicional">Informe a porcentagem adicional por hora extra</string>
+    <string name="adicional">Adicional (%)</string>
+    <string name="habilitar">Habilitar Configurações</string>
+    <string name="valor_hora">Valor hora (R$)</string>
+    <string name="tempo_trabalhado">Tempo trabalhado</string>
+    <string name="to_rico">Tô Rico</string>
+    <string name="parar">Parar</string>
+    <string name="pausar">Pausar</string>
+    <string name="iniciar">Iniciar</string>
+</resources>

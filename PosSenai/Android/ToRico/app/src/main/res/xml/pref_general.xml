@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="salario_bruto"
+        android:title="@string/salario_bruto"
+        android:summary="@string/informe_salario_bruto"
+        android:defaultValue="1500"
+        android:digits="0123456789"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+    <EditTextPreference
+        android:key="horas_normais"
+        android:title="@string/horas_normais"
+        android:summary="@string/informe_horas_normais"
+        android:defaultValue="180"
+        android:digits="0123456789"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+    <EditTextPreference
+        android:key="adicional"
+        android:title="@string/adicional"
+        android:summary="@string/informe_porcentagem_adicional"
+        android:defaultValue="40"
+        android:digits="0123456789"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+</PreferenceScreen>

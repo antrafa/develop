@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notificacoes</string>
+    <string name="action_settings">Settings</string>
+    <string name="criando_notificacao">Criando Notificação</string>
+    <string name="title_activity_executar_notificacao">ExecutarNotificacao</string>
+    <string name="recebendo_notificacao">Recebendo notificação</string>
+</resources>

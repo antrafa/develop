@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Churrascator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="informe_consumo_carne">Informe o consumo de carne</string>
+    <string name="proximo">Próximo</string>
+    <string name="title_activity_consumo_linguica">ConsumoLinguicaActivity</string>
+    <string name="informe_consumo_linguica">Informe o consumo de linguiça</string>
+    <string name="title_activity_consumo_refri">ConsumoRefriActivity</string>
+    <string name="informe_consumo_refri">Informe o consumo de refrigerante</string>
+    <string name="title_activity_numero_pessoas">NumeroPessoasActivity</string>
+    <string name="informe_numero_pessoas">Informe o número de pessoas</string>
+    <string name="title_activity_resultado">ResultadoActivity</string>
+    <string name="resultado_churrasco">Resultado para seu churrasco</string>
+</resources>

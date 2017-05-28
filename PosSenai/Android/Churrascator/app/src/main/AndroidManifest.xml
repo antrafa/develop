@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.antoniorafael.churrascator" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ConsumoCarneActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConsumoLinguicaActivity"
+            android:label="@string/title_activity_consumo_linguica" >
+        </activity>
+        <activity
+            android:name=".ConsumoRefriActivity"
+            android:label="@string/title_activity_consumo_refri" >
+        </activity>
+        <activity
+            android:name=".NumeroPessoasActivity"
+            android:label="@string/title_activity_numero_pessoas" >
+        </activity>
+        <activity
+            android:name=".ResultadoActivity"
+            android:label="@string/title_activity_resultado" >
+        </activity>
+    </application>
+
+</manifest>

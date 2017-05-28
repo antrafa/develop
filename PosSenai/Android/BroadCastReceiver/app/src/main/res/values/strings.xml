@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BroadCastReceiver</string>
+    <string name="title_activity_abrindo_broadcast">AbrindoBroadcast</string>
+</resources>
