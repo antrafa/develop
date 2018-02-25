@@ -1,0 +1,3 @@
+Main-Class: Principal
+Name: Principal.class
+Java-Bean: True

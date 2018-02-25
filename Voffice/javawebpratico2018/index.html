@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+  </head>
+  <body>
+    <h1>Movies</h1>
+    <form>
+      <input type="hidden" value="-1" id="txfId" />
+      <div>
+        <label for="txfTitle">Title:</label>
+        <input type="text" id="txfTitle" placeholder="Ex:. Iron Man" size="30" maxlength="100" />
+      </div>
+      <div>
+        <label for="txfReleasedDate">Released Date:</label>
+        <input type="text" id="txfReleasedDate" placeholder="dd/mm/yyyy" size="12"/>
+      </div>
+      <div>
+        <label for="txfBudget">Budget:</label>
+        <input type="text" id="txfBudget" placeholder="180.000" />
+      </div>
+      <div>
+        <label for="txfPoster">Poster:</label>
+        <input type="url" id="txfPoster" placeholder="http://..." size="80" />
+      </div>
+      <div>
+        <button id="btnReset" type="reset">Reset</button>
+        <button id="btnSave" type="submit">Salvar</button>
+      </div>
+    </form>
+    <br />
+    <table cellpadding="0" cellspacing="0" border=1 style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Released Date</th>
+          <th>Budget</th>
+          <th>Poster</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+    <div id="callback"></div>
+    <script src="app-ajax.js"></script>
+  </body>
+</html>
