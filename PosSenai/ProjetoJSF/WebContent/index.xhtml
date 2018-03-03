@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.css"/>
+</h:head>
+<h:body>
+
+	<h:form>
+		<h:inputText value="#{testeMB.nome}" required="true" requiredMessage="Campo Obrigatório" id="nome"></h:inputText>
+		<h:message for="nome" style="background:#900;color:#fff"></h:message>
+		<h:commandButton value="Enviar" action="#{testeMB.testaBotao}" />
+		
+		
+		<h:dataTable value="#{testeMB.clientes}" styleClass="table table-striped" var="cliente">
+		
+			<h:column>#{cliente.nome}</h:column>
+			<h:column>#{cliente.telefone}</h:column>
+			
+		</h:dataTable>		
+			
+	</h:form>
+	
+</h:body>
+</html>

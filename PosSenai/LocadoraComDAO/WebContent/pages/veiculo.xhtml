@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+	<h:form id="frm">
+		<center>
+			<h:panelGrid columns="2">
+				<h:outputText value="Nome: " />
+				<p:inputText value="#{veiculoMB.veiculo.nome}" />
+
+				<h:outputText value="Marca: " />
+				<h:inputText value="#{veiculoMB.veiculo.marca}" />
+
+				<h:outputText value="Transmissão: " />
+				<h:selectOneMenu value="#{veiculoMB.veiculo.transmissao}">
+					<f:selectItem itemLabel="Automático" itemValue="1" />
+					<f:selectItem itemLabel="Manual" itemValue="2" />
+					<f:selectItem itemLabel="Tip-tronic" itemValue="3" />
+				</h:selectOneMenu>
+
+				<h:commandButton action="#{veiculoMB.insereVeiculo}" value="Salvar" />
+			</h:panelGrid>
+			<p:dataTable var="v" value="#{veiculoMB.veiculos}" widgetVar="carsTable">
+
+				<p:column filterBy="#{v.nome}" sortBy="#{v.nome}">
+					<f:facet name="header">Veículo</f:facet>
+				#{v.nome}
+				</p:column>
+				<p:column>
+					<f:facet name="header">Marca</f:facet>
+				#{v.marca}
+				</p:column>
+				<p:column>
+					<f:facet name="header">Transmissão</f:facet>
+				#{v.nomeTransmissao}
+				</p:column>
+				<p:column>
+					<h:commandButton value="Editar">
+						<f:setPropertyActionListener value="#{v}"
+							target="#{veiculoMB.veiculo}" />
+					</h:commandButton>
+					<h:commandButton value="Deletar" action="#{veiculoMB.deletar}">
+						<f:setPropertyActionListener value="#{v}"
+							target="#{veiculoMB.veiculo}" />
+					</h:commandButton>
+				</p:column>
+			</p:dataTable>
+		</center>
+	</h:form>
+</h:body>
+</html>

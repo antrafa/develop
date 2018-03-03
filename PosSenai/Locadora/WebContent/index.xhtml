@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Locadora de carros</title>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+</h:head>
+<h:body>
+
+	<div style="width: 300px; margin: 30px auto;">
+
+		<h:form>
+		
+			<h:panelGrid columns="1">
+
+				<h:outputText value="Nome: " />
+				<h:inputText value="#{veiculoMB.veiculo.nome}" />
+
+				<h:outputText value="Modelo: " />
+				<h:inputText value="#{veiculoMB.veiculo.modelo}" />
+
+				<br />
+
+				<h:commandButton value="Add" action="#{veiculoMB.insereVeiculo}" />
+
+			</h:panelGrid>
+
+			<br />
+
+			<h:dataTable var="veiculo" value="#{veiculoMB.veiculos}"
+				styleClass="table table-bordered">
+
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					#{veiculo.nome}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Modelo</f:facet>
+					#{veiculo.modelo}
+				</h:column>
+
+			</h:dataTable>
+
+		</h:form>
+
+
+
+	</div>
+
+</h:body>
+</html>
