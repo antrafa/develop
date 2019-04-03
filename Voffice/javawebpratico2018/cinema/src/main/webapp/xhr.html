@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax</title>
+</head>
+<body>
+  <header>
+    <h1>Ajax</h1>
+    <h2>XMLHttpRequest</h2>
+  </header>
+  <main>
+    <form>
+      <input type="button" value="Buscar" />
+    </form>
+    <div id="output">
+      --
+    </div>
+  </main>
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://172.16.200.151:8080/movies/api/html5/movies", true);
+    xhr.addEventListener("load", function(e) {
+        var response = e.target.responseText;
+        var status = e.target.status;
+        var movies = JSON.parse(response);
+        var firstMovieTitle = movies[0].title;
+        document.getElementById("output").innerHTML = response;
+    });
+    xhr.send();
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open("POST", "http://172.16.200.151:8080/movies/api/html5/movies", true);
+    var movie = {title: "Black Panther", releasedDate: "2018-02-14", budget: 200000, poster:"dffdf", id:22};
+    xhr2.addEventListener("load", function(e) {
+      document.getElementById("output").innerHTML = e.target.responseText;
+    });
+    var params = "title="+movie.title+"&releasedDate="+movie.releasedDate+"&budget="+movie.budget+"&poster="+movie.poster;
+//    xhr2.send(params);
+  </script>
+</body>
+</html>

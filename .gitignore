@@ -1,1 +1,8 @@
+# dependencies
+node_modules
+node_modules/
+
+# misc
+.settings
 .DS_Store
+.editorconfig
