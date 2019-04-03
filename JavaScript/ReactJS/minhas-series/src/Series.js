@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import api from './Api'
 
 const statuses = {
@@ -41,7 +42,7 @@ class Series extends Component {
         return (
             <div key={series.id} className="item  col-xs-4 col-lg-4">
                 <div className="thumbnail">
-                    <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                    <img className="group list-group-image" src={series.image} alt="" />
                     <div className="caption">
                         <h4 className="group inner list-group-item-heading">{series.name}</h4>
                         <div className="row">
@@ -49,7 +50,7 @@ class Series extends Component {
                                 <p className="lead">{series.genre} / {statuses[series.status]}</p>
                             </div>
                             <div className="col-xs-12">
-                                <a className="btn btn-success" href="">Gerenciar</a>
+                                <Link to={'/series-edit/'+series.id} className="btn btn-success" href="">Editar</Link>
                                 &nbsp;
                                 <a className="btn btn-danger" onClick={ () => this.deleteSeries(series.id) }>Excluir</a>
                             </div>

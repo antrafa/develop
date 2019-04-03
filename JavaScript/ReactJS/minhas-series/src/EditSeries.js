@@ -8,18 +8,29 @@ const statuses = {
     'toWatch': 'Assistir'
 }
 
-class NewSeries extends Component {
+class EditSeries extends Component {
+
     constructor(props){
         super(props)
         this.state = {
             genres:[],
             isLoading: false,
-            redirect: false
+            redirect: false,
+            serie: {}
         }
-        this.saveSeries = this.saveSeries.bind(this)
+        this.updateSerie = this.updateSerie.bind(this)
     }
     componentDidMount(){
         this.setState({ isLoading: true })
+        api.loadSeriesById(this.props.match.params.id)
+            .then( (res) => {
+                this.setState({ serie: res.data })
+                this.refs.name.value = this.state.serie.name
+                this.refs.status.value = this.state.serie.status
+                this.refs.genre.value = this.state.serie.genre
+                this.refs.comments.value = this.state.serie.comments
+                this.refs.image.value = this.state.serie.image
+            })
         api.loadGenres()
             .then((res) => {
                 this.setState({
@@ -28,18 +39,19 @@ class NewSeries extends Component {
                 })
             })
     }
-    saveSeries(){
-        const newSeries = {
+    updateSerie(){
+        const serie = {
+            id: this.props.match.params.id,
             name: this.refs.name.value,
             status: this.refs.status.value,
             genre: this.refs.genre.value,
             comments: this.refs.comments.value,
             image: this.refs.image.value
         }
-        api.saveSeries(newSeries)
+        api.updateSerie(serie)
             .then( (res) => {
                 this.setState({
-                    redirect: '/series/'+newSeries.genre
+                    redirect: '/series/'+serie.genre
                 })
             })
     }
@@ -50,12 +62,12 @@ class NewSeries extends Component {
                     this.state.redirect && 
                     <Redirect to={this.state.redirect} />
                 }
-                <h1>Nova Série</h1>
+                <h1>Editar Série</h1>
                 <div className="col-md-6 col-md-offset-3">
                     <form>
-                        <div className="form-group text-left">
+                    <div className="form-group text-left">
                             <label htmlFor="name">Nome</label>
-                            <input type="text" ref="name" id="nome" className="form-control" />
+                            <input type="text" ref="name" id="name" className="form-control" />
                         </div>
                         <div className="form-group text-left">
                             <label htmlFor="image">Imagem</label>
@@ -85,7 +97,7 @@ class NewSeries extends Component {
                             <textarea ref="comments" id="comments" className="form-control" rows="3"></textarea>
                         </div>
                         <div className="form-group">
-                            <button type="button" onClick={this.saveSeries} className="btn btn-success">Salvar</button>
+                            <button type="button" onClick={this.updateSerie} className="btn btn-success">Salvar</button>
                         </div>
                     </form>
                 </div>
@@ -95,4 +107,4 @@ class NewSeries extends Component {
 
 }
 
-export default NewSeries
+export default EditSeries

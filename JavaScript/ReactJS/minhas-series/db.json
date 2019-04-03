@@ -5,32 +5,32 @@
       "name": "How I met your mother",
       "status": "watched",
       "genre": "Comédia",
-      "comments": "Muito bom"
+      "comments": "Muito bom",
+      "image": "http://copperfacejacks.ie/wp-content/uploads/2017/11/how-i-met-your-mother-challenge-accepted-400x250.jpg"
     },
     {
       "id": 2,
       "name": "Friends",
-      "status": "watching",
+      "status": "watched",
       "genre": "Comédia",
-      "current": {
-        "episode": "01",
-        "season": "09"
-      },
-      "comments": "Bom para descontrair"
+      "comments": "Bom para descontrair",
+      "image": "http://www.clipartroo.com/images/0/friends-clipart-966.png"
     },
     {
       "id": 3,
       "name": "Breaking Bad",
       "status": "watched",
       "genre": "Drama",
-      "comments": "Say My Name - melhor cena"
+      "comments": "Say My Name - melhor cena",
+      "image": "https://www.couchpotato.buzz/wp-content/uploads/2018/03/jess-pinkman4-400x250.jpg?x96148"
     },
     {
       "id": 4,
       "name": "Better Call Saul",
       "status": "toWatch",
       "genre": "Drama",
-      "comments": "Galera fala bem"
+      "comments": "Galera fala bem",
+      "image": "https://www.couchpotato.buzz/wp-content/uploads/2017/06/Bob-Odenkirk-Better-Call-Saul-400x250.jpg?x96148"
     }
   ],
   "genres": [

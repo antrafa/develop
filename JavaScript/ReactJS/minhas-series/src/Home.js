@@ -24,7 +24,7 @@ class Home extends Component {
       }
       renderGenreLink(genre){
         return (
-          <span key={genre}>&nbsp;<Link to={`/series/${genre}`}>{genre}</Link>&nbsp;</span>
+            <li key={genre}><Link to={`/series/${genre}`}>{genre}</Link></li>
         )
       }
 
@@ -32,30 +32,27 @@ class Home extends Component {
         return (
             <div>
                 <section id="intro" className="intro-section">
+
                     <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                        <h1><img src="images/logo.png" /></h1>
-                        <p>Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.</p>
+                        {
+                            this.state.isLoading && 
+                            <div className="row"><span>Aguarde, carregando....</span></div>
+                        }
+                        {
+                            !this.state.isLoading && 
+                            <ul class="nav nav-pills text-center">
+                                { 
+                                    this.state.genres.map(this.renderGenreLink)
+                                }
+                            </ul>
+                        }
+                        <div className="row">
+                            <div className="col-lg-12">
+                            <h1><img src="images/logo.png" /></h1>
+                            <p>Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.</p>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </section>
-
-                <section>
-                    {
-                    this.state.isLoading && 
-                    <span>Aguarde, carregando....</span>
-                    }
-                    {
-                    !this.state.isLoading && 
-                    <div>
-                        Ver séries do gênero: 
-                        { 
-                            this.state.genres.map(this.renderGenreLink)
-                        }
-                    </div>
-                    }
                 </section>
             </div>
         )
