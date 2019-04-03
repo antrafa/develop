@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom'
 
 import Home from './Home'
-import NewSerires from './NewSeries'
 import Series from './Series'
+import NewSerires from './NewSeries'
 
 //functional-stateless component
 const About = () => <section className="intro-section"><h1>Sobre</h1></section>
@@ -21,7 +21,7 @@ class App extends Component {
             <div className="container">
               <div className="navbar-header page-scroll">
                 <a className="navbar-brand page-scroll" href="#page-top">
-                    <img src="images/logo.png" height="30" />
+                    <img src="/images/logo.png" height="30" />
                 </a>
               </div>
               <div className="collapse navbar-collapse navbar-ex1-collapse">
@@ -35,7 +35,7 @@ class App extends Component {
             </div>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route path="/series:genre" component={Series} />
+          <Route path="/series/:genre" component={Series} />
           <Route exact path="/about" component={About} />
           <Route exact path="/new" component={NewSerires} />
         </div>
