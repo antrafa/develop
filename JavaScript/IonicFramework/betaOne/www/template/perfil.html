@@ -1,0 +1,49 @@
+<ion-view title="Perfil" id="pagina-perfil">
+
+	<ion-content padding="true" class="has-header app-content">
+
+		<div class="img-perfil">
+			<figure style="background-image:url(img/dtSPGtDqRUG05JNGqhpf_IMG-20160607-WA0006.jpg);"></figure>
+			<h4>Antonio Rafael Ortega</h4>
+		</div>
+		
+		<div class="spacer" style="height: 20px;"></div>
+
+		<div class="textCenter">
+			<a href="#/menu/editardados" class="button button-dark">Editar perfil</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<h4 id="perfil-heading1" style="color:#000000;">Últimos cartões</h4>
+
+		<div class="list card"  ng-repeat="contato in contatos">
+			
+			<div class="item item-avatar" ng-click="detalhesUsuario(contato.id)">
+				<img src="img/dWDaaGWPQQSOnMuhSThl_Mr_beans_holiday_ver2.jpg">
+				<h2>{{contato.name}}</h2>
+				<p>{{contato.email}}</p>
+			</div>
+
+			<div class="item item-body" ng-click="detalhesUsuario(contato.id)">
+				<ul class="tags">
+					<li>PHP</li>
+					<li>CSS</li>
+					<li>HTML</li>
+				</ul>
+			</div>
+			<div class="item share">
+				<p>
+					<a href="#" class="button button-stable button-small" style="float:right">
+						<i class="icon ion-android-share-alt"></i>
+					</a>
+				</p>
+			</div>
+
+		</div>
+
+		<a ui-sref="menu.meusContatos()" id="perfil-button13" class="button button-calm button-block">Ver todos os cartões</a>
+
+	</ion-content>
+
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view title="Detalhes">
+
+	<ion-content padding="true" class="has-header app-content">
+
+		<div ng-repeat="contato in contatoDetalhes">
+
+			<ion-list id="perfil-list6">
+				<ion-item class="item-icon-right" id="perfil-list-item11">{{contato.name}}
+					<i class="icon ion-android-person icon-accessory"></i>
+				</ion-item>
+				<ion-item class="item-icon-right" id="perfil-list-item13">{{contato.email}}
+					<i class="icon ion-android-mail icon-accessory"></i>
+				</ion-item>
+				<ion-item class="item-icon-right" id="perfil-list-item13">Possui cartão? {{contato.id_card}}
+					<i class="icon ion-android-mail icon-accessory"></i>
+				</ion-item>
+			</ion-list>
+
+		</div>
+
+	</ion-content>
+
+</ion-view>

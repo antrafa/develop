@@ -1,0 +1,31 @@
+<ion-view title="{{loginPg}}" hide-nav-bar="true" hide-back-button="true" cache-view="false">
+
+	<ion-content class="app-content" padding="true">
+		
+		<div>
+			<img src="img/hSCJ9a6HRDaR9YgO62fi_1-zebra-logo-by-yuro.gif" style="display: block; width: 50%; height: auto; margin:10px auto;">
+		</div>
+
+		<form id="login-form1" name="formLogin" class="list">
+
+			<ion-list id="login-list3">
+				<label class="item item-input" id="login-input1" name="email">
+					<input type="email" placeholder="E-mail" ng-model="login.email" ng-required="true"  ng-pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}/">
+				</label>
+				<label class="item item-input" id="login-input2" name="senha">
+					<input type="password" placeholder="Senha" ng-model="login.senha" ng-required="true" ng-minlength="5" />
+				</label>
+			</ion-list>
+			
+			<button ng-click="loginUsuario(login)" class="button button-calm button-block" ng-disabled="formLogin.$invalid">Login</button>
+			<span id="login-button2" ng-click="openModalCadastro()" class="button button-positive button-small button-block button-clear">ou cadastre-se</span>
+			
+		</form>
+		
+		<button id="login-button3" class="button button-positive button-block icon ion-social-facebook"></button>
+		<button id="login-button4" class="button button-assertive button-block icon ion-social-googleplus"></button>
+		<button id="login-button5" class="button button-calm button-block icon ion-social-linkedin"></button>
+
+	</ion-content>
+
+</ion-view>

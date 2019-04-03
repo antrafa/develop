@@ -1,0 +1,76 @@
+<ion-side-menus enable-menu-with-back-views="false"><!-- enable-menu-with-back-views="false" -->
+
+	<ion-side-menu-content>
+
+		<ion-nav-bar class="bar bar-header bar-dark">
+
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-ios-refresh-empty" ng-click="atualizarListaView()"></button>
+			</ion-nav-buttons>
+
+		</ion-nav-bar>
+
+		<ion-nav-view name="menuContent"></ion-nav-view>
+
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left" class="sidemenu" style="background-color:#FFFFFF;">
+	
+		<ion-content padding="false" style="top:0px !important;" class="side-menu-left ">
+	
+			<div class="img-perfil">
+				<figure style="background-image:url(img/dtSPGtDqRUG05JNGqhpf_IMG-20160607-WA0006.jpg);"></figure>
+				<h4>Antonio Rafael Ortega</h4>
+				<p>antonioiae@gmail.com</p>
+			</div>
+	
+			<ion-list class="menu-sidemenu">
+	
+				<ion-item class="item-icon-right" href="#/menu/login" menu-close>Login
+					<i class="icon ion-android-person icon-accessory"></i>
+				</ion-item>
+
+				<ion-item class="item-icon-right" href="#/menu/perfil" menu-close>Perfil
+					<i class="icon ion-android-person icon-accessory"></i>
+				</ion-item>
+	
+				<ion-item class="item-icon-right" href="#/menu/home" menu-close>Meus cartões
+					<i class="icon ion-ios-contact-outline icon-accessory"></i>
+				</ion-item>
+	
+				<ion-item class="item-icon-right" href="#/menu/home" menu-close>Contatos
+					<i class="icon ion-android-contacts icon-accessory"></i>
+				</ion-item>
+	
+				<ion-item class="item-icon-right" ng-click="openModal()" menu-close>Novo contato
+					<i class="icon ion-android-person-add icon-accessory"></i>
+				</ion-item>
+	
+			</ion-list>
+
+			<ion-list class="menu-sidemenu menu-sidemenu-config">
+	
+				<ion-item class="item-icon-right" href="#/menu/configuracoes" menu-close>Configurações
+					<i class="icon ion-gear-b icon-accessory"></i>
+				</ion-item>
+	
+				<ion-item class="item-icon-right" href="#/menu/home" menu-close>Ver tutorial
+					<i class="icon ion-help-circled icon-accessory"></i>
+				</ion-item>
+	
+				<ion-item class="item-icon-right" href="#/menu/sair" menu-close>Sair
+					<i class="icon ion-android-exit icon-accessory"></i>
+				</ion-item>
+	
+			</ion-list>
+	
+		</ion-content>
+	
+	</ion-side-menu>
+
+</ion-side-menus>

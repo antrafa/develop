@@ -1,0 +1,149 @@
+/* Empty. Add your own CSS if you like */
+
+.textCenter {
+	text-align: center;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: #ccc;
+	margin:  40px 0;
+	border: none;
+}
+
+.btn-add {
+	border-radius: 50%;
+	border: 1px;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 9999;
+	background-color: #f82121;
+	padding: 2px 0 0 1px;
+	text-align: center;
+	-webkit-box-shadow: 2px 3px 2px .5px rgba(0, 0, 0, .3);
+	-ms-box-shadow: 2px 3px 2px .5px rgba(0, 0, 0, .3);
+	box-shadow: 2px 3px 2px .5px rgba(0, 0, 0, .3);
+}
+.sidemenu {
+}
+.sidemenu .img-perfil {
+	padding: 30px 10px 10px;
+	background: url('../img/background-perfil.jpg');
+	background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
+}
+.sidemenu .img-perfil figure {
+	width: 60px;
+	height: 60px;
+	background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
+	overflow: hidden;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border: 1px solid #fff;
+}
+.sidemenu .img-perfil h4 {
+	font-size: 15px;
+	margin-bottom: 0;
+	color: #fff;
+	font-weight: bold
+}
+
+.sidemenu .img-perfil p {
+	font-size: 14px;
+	color: #fff;
+	opacity:0.80; -moz-opacity: 0.80; filter: alpha(opacity=80);
+	margin-bottom: 0;
+}
+
+.menu-sidemenu {
+	display: block;
+	margin-top: 10px;
+}
+
+.menu-sidemenu-config {
+	margin-top: 20px;
+	padding-top: 15px;
+	border-top: 1px solid #eee;
+}
+
+.menu-sidemenu .item {
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.menu-sidemenu .item .item-content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.app-content {
+	background-color: #eee;
+}
+
+.tags li { 
+	font-size: 14px;
+	margin-right: 5px;
+	display:inline-block; zoom:1; *display:inline;
+	background: #ccc;
+	padding: 5px 20px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-ms-border-radius: 20px;
+}
+
+.list .card .item .share {
+	padding: 5px 15px;
+}
+
+.list .card .item .item-body {
+	//padding: 5px 15px;
+}
+
+#pagina-perfil .img-perfil {
+	width: 100%;
+	height: auto;
+	padding: 30px 10px 10px;
+	background: url('../img/background-perfil.jpg');
+	background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+#pagina-perfil .img-perfil h4 {
+	font-size: 22px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+	-webkit-text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+	-ms-text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+
+#pagina-perfil .img-perfil figure {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	background-size: cover;
+	-ms-background-size: cover;
+	-webkit-background-size: cover;
+	overflow: hidden;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+.pac-container {
+	z-index: 999999;
+}
+
+

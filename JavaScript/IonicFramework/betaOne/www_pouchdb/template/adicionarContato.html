@@ -1,0 +1,33 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-header bar-dark">
+		<h1 class="title">Cadastro</h1>
+		<button class="button button-clear button-icon button-small icon ion-close-circled" ng-click="closeModal()"></button>
+	</ion-header-bar>
+	<ion-content class="app-content">
+
+		<div class="spacer" style="height: 10px;"></div>
+
+		<form id="contato-form1" name="formCadastroContato" class="list">
+
+			<div class="list">
+
+				<label class="item item-input">
+					<input type="text" placeholder="Nome" ng-model="contato.name" ng-required="true">
+				</label>
+				<label class="item item-input">
+					<input type="email" placeholder="E-mail" ng-model="contato.email" ng-required="true" ng-pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}/">
+				</label>
+				
+				<label class="item item-input" id="novoContato-search1">
+					<i class="icon ion-location placeholder-icon"></i>
+					<input type="text" placeholder="Adicionar localização" google-autocomplete-suggestion location="contato.location" country-code="{{countryCode}}" on-selection="onAddressSelection(location)" ng-model="contato.location.formatted_address" readonly>
+				</label>
+
+				<button class="button button-calm button-block" ng-disabled="formCadastroContato.$invalid" ng-click="cadastrarContato(contato)">Cadastrar</button>
+
+			</div>
+
+		</form>
+
+	</ion-content>
+</ion-modal-view>

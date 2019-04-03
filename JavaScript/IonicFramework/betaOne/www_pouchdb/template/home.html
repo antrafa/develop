@@ -1,0 +1,59 @@
+<ion-view view-title="{{titulo}}">
+	
+	<div class="btn-add" ng-click="openModal()">
+		<button class="button button-icon button-clear icon ion-plus button-light"></button>
+	</div>
+
+	<ion-content class="app-content">
+		
+		<div class="list">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="Buscar" ng-model="buscandoCartao">
+			</label>
+		</div>
+
+		<div class="card textCenter" ng-show="!contatos.length">
+			<div class="item item-text-wrap">
+				{{mostrarMsgNenhum}}
+			</div>
+		</div>
+
+		<ion-list can-swipe="myswipe">
+			<ion-item  ng-repeat="contato in contatos | filter:buscandoCartao">
+				<div ng-click="detalhesUsuario(contatos,contato._id)">
+					<h2>{{contato.name}}</h2>
+					<p>{{contato.email}}</p>
+				</div>
+				<ion-option-button class="button-assertive button-info" ng-click="apagarContato(contato)">Apagar</ion-option-button>
+			</ion-item>
+		</ion-list>
+
+		<div class="list card" ng-repeat="contato in contatos | filter:buscandoCartao">
+			
+			<div class="item item-avatar" ng-click="detalhesUsuario(contatos,contato._id)">
+				<img src="img/dWDaaGWPQQSOnMuhSThl_Mr_beans_holiday_ver2.jpg">
+				<h2>{{contato.name}}</h2>
+				<p>{{contato.email}}</p>
+			</div>
+
+			<div class="item item-body" ng-click="detalhesUsuario(contatos,contato._id)">
+				<ul class="tags">
+					<li>PHP</li>
+					<li>CSS</li>
+					<li>HTML</li>
+				</ul>
+			</div>
+			<div class="item share">
+				<p>
+					<a href="#" class="button button-stable button-small" style="float:right">
+						<i class="icon ion-android-share-alt"></i>
+					</a>
+				</p>
+			</div>
+
+		</div>
+
+	</ion-content>
+
+</ion-view>
