@@ -5,7 +5,6 @@ const Comments = ({comments}) => {
     const keys = Object.keys(comments)
     return (
         <ul>
-            {/* Comment */}
             {keys.map( key => {
                 return <Comment c={comments[key]} key={key} />
             })}
