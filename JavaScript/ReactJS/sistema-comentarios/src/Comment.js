@@ -2,11 +2,22 @@ import React from 'react'
 
 const Comment = ({c}) => {
     let comment = 'vazio'
-    if(c && c.comment){
-        comment = c.comment
+    let email = ''
+    if(c){
+        if(c.comment){
+            comment = c.comment
+        }
+        if(c.email){
+            email = c.email
+        }
     }
     return(
-        <li>{comment}</li>
+        <div className='card mt-3'>
+            <div className='card-body'>
+                {comment} <br />
+                <span className='text-muted'>{ email && ('Enviado por: ' + email)}</span>
+            </div>
+        </div>
     )
 }
 

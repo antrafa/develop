@@ -4,11 +4,12 @@ import Comment from './Comment'
 const Comments = ({comments}) => {
     const keys = Object.keys(comments)
     return (
-        <ul>
+        <div>
+            <hr />
             {keys.map( key => {
                 return <Comment c={comments[key]} key={key} />
             })}
-        </ul>
+        </div>
     )
 }
 
