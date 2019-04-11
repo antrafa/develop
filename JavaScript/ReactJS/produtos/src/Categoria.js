@@ -1,49 +1,55 @@
 import React, { Component } from 'react'
-import Axios from 'axios';
+import { Link } from 'react-router-dom'
 
 class Categoria extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            produtos: [],
-            categoria: {}
+            id: null
         }
-        this.loadData = this.loadData.bind(this)
     }
-    loadData(catId) {
-        Axios
-            .get('http://localhost:3001/produtos?categoria=' + catId)
-            .then(res => {
-                this.setState({
-                    produtos: res.data
-                });
-            });
-        Axios
-            .get('http://localhost:3001/categorias/' + catId)
-            .then(res => {
-                this.setState({
-                    categoria: res.data
-                });
-            });
+    loadData = (catId) => {
+        this.setState({ id: catId })
+        this.props.loadProdutos(catId)
+        this.props.loadCategoria(catId)
     }
-    componentDidMount(){
+    componentDidMount() {
         this.loadData(this.props.match.params.catId)
     }
-    componentWillReceiveProps(newProps){
-        this.loadData(newProps.match.params.catId)
+    componentWillReceiveProps(newProps) {
+        if (newProps.match.params.catId !== this.state.id) {
+            this.loadData(newProps.match.params.catId)
+        }
     }
-    renderProduto(produto){
-        return(
+    renderProduto = (produto) => {
+        return (
             <div className='card card-body bg-light mt-2' key={produto.id}>
-                    {produto.produto}
+                <h5 class="card-title">{produto.produto}</h5>
+                <div className='card-text row'>
+                    <button className='btn btn-secondary col-md-6' onClick={
+                        () => {
+                                this.props.removeProduto(produto)
+                                    .then( res => this.loadData(this.props.match.params.catId))
+                            }
+                        }>Excluir</button>
+                    <Link to={'/produtos/editar/'+produto.id} className='btn btn-info col-md-6'>Editar</Link>
+                </div>
             </div>
         )
     }
     render() {
         return (
             <div>
-                <h4>{this.state.categoria.categoria}</h4>
-                {this.state.produtos.map(this.renderProduto)}
+                <h4>{
+                    this.props.categoria &&
+                    this.props.categoria.categoria &&
+                    this.props.categoria.categoria
+                }</h4>
+                {   
+                    this.props.produtos.length === 0 && 
+                    <div className='alert alert-info'>Nenhum produto</div>
+                }
+                {this.props.produtos.map(this.renderProduto)}
             </div>
         )
     }

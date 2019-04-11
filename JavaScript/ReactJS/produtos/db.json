@@ -2,23 +2,23 @@
   "produtos": [
     {
       "id": 1,
-      "produto": "Sabão",
-      "categoria": 1
+      "produto": "Primeiro Limpeza",
+      "categoria": "1"
     },
     {
-      "id": 2,
-      "produto": "Detergente",
-      "categoria": 1
+      "produto": "Primeiro Alimentos",
+      "categoria": "2",
+      "id": 2
     },
     {
-      "id": 3,
-      "produto": "Bolacha",
-      "categoria": 2
+      "produto": "Segundo alimentos",
+      "categoria": "2",
+      "id": 3
     },
     {
       "id": 4,
-      "produto": "Bolo",
-      "categoria": 2
+      "produto": "Segundo brinquedo",
+      "categoria": "3"
     }
   ],
   "categorias": [
