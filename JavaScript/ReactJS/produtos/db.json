@@ -1,0 +1,38 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "Sabão",
+      "categoria": 1
+    },
+    {
+      "id": 2,
+      "produto": "Detergente",
+      "categoria": 1
+    },
+    {
+      "id": 3,
+      "produto": "Bolacha",
+      "categoria": 2
+    },
+    {
+      "id": 4,
+      "produto": "Bolo",
+      "categoria": 2
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "categoria": "Limpeza"
+    },
+    {
+      "id": 2,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 3,
+      "categoria": "Brinquedos"
+    }
+  ]
+}
